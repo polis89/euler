@@ -14,3 +14,14 @@ def isPrime(num):
 def getPermutationsNumber(num):
     digits = [int(a) for a in str(num)]
     return [int(''.join(map(str,x))) for x in list(itertools.permutations(digits))]
+
+def isPermutation(a,b):
+    aSplitted = [int(x) for x in str(a)]
+    bSplitted = [int(x) for x in str(b)]
+    if len(aSplitted) != len(bSplitted):
+        return False
+    for x in aSplitted:
+        if x not in bSplitted:
+            return False
+        bSplitted.remove(x)
+    return True

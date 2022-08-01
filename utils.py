@@ -25,3 +25,9 @@ def isPermutation(a,b):
             return False
         bSplitted.remove(x)
     return True
+
+def xor(a,b):
+    return a ^ b
+
+def num2ascii(num):
+    return chr(num)

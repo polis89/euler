@@ -31,3 +31,9 @@ def xor(a,b):
 
 def num2ascii(num):
     return chr(num)
+
+def gcd(a, b):
+  if b == 0:
+    return a
+  else:
+    return gcd(b, (a % b))
